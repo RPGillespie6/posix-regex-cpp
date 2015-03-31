@@ -46,7 +46,8 @@ vector<string> Match::groups()
 
     for (unsigned int i = 0; i < pgroups.size(); i++)
     {
-        g.push_back(match.substr(pgroups[i].start, pgroups[i].end - pgroups[i].start));
+        if (pgroups[i].start >= 0 && pgroups[i].end >= 0)
+            g.push_back(match.substr(pgroups[i].start, pgroups[i].end - pgroups[i].start));
     }
 
     return g;

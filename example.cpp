@@ -1,4 +1,4 @@
-#include "POSIXRegex.h"
+ #include "POSIXRegex.h"
 
 #include <iostream>
 #include <string>
@@ -36,5 +36,4 @@ int main()
     cout << "Match start index: " << m.start(0) << endl;    
     cout << "Match end index: " << m.end(0) << endl;    
     cout << endl;
-
 }
