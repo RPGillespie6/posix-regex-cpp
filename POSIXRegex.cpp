@@ -102,6 +102,11 @@ bool Regex::compile(string pattern, bool case_insensitive)
     return (ret == 0);
 }
 
+bool Regex::isCompiled()
+{
+    return compiled;
+}
+
 std::string Regex::getPattern()
 {
     return pattern;

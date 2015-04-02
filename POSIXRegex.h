@@ -87,6 +87,11 @@ class Regex
             Returns the current compiled pattern in string form
         */
         std::string getPattern();
+
+        /*
+            Returns whether there is a current compiled regex in memory
+        */
+        bool isCompiled();
 };
 
 }
