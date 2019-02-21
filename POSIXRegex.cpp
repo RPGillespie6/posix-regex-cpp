@@ -37,6 +37,9 @@ string Match::group(int group)
     if (group > pgroups.size())
         return "";
 
+    if (pgroups[group].start == -1 || pgroups[group].end == -1)
+        return "";
+    
     return match.substr(pgroups[group].start, pgroups[group].end - pgroups[group].start);
 }
 
