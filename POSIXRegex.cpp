@@ -16,25 +16,25 @@ Match::Match(string match)
     this->match = match;
 }
 
-int Match::start(int group)
+int Match::start(unsigned int group)
 {
-    if (group > pgroups.size())
+    if (group >= pgroups.size())
         return -1;
 
     return pgroups[group].start;
 }
 
-int Match::end(int group)
+int Match::end(unsigned int group)
 {
-    if (group > pgroups.size())
+    if (group >= pgroups.size())
         return -1;
 
     return pgroups[group].end;
 }
 
-string Match::group(int group)
+string Match::group(unsigned int group)
 {
-    if (group > pgroups.size())
+    if (group >= pgroups.size())
         return "";
 
     if (pgroups[group].start == -1 || pgroups[group].end == -1)
