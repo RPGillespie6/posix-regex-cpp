@@ -32,17 +32,17 @@ class Match
         /*
             Returns the starting index of the group
         */
-        int start(int group);
+        int start(unsigned int group);
 
         /*
             Returns the ending index of the group
         */
-        int end(int group);
+        int end(unsigned int group);
 
         /*
             Returns a string representing the provided groups
         */
-        std::string group(int group);
+        std::string group(unsigned int group);
 
         /*
             Returns a list of strings representing all capture groups
